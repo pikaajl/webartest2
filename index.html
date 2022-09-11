@@ -1,22 +1,93 @@
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-</head>
-<body>
-    <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/pikaajl/webartest2/main/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-        <a-assets>
-            <img id="card" src="https://raw.githubusercontent.com/pikaajl/webartest2/main/targets.png" />
-            <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-        </a-assets>
 
-        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-        <a-entity mindar-image-target="targetIndex: 0">
-            <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
-            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
-        </a-entity>
-    </a-scene>
-</body>
-</html>
+
+<script language="JavaScript1.2"><!--
+
+
+
+
+    function get_password() {
+
+        orig_pass = prompt("Please enter password", "");
+
+        if (orig_pass != null && orig_pass != "")
+
+            password = new Array(orig_pass.length);
+
+        for (i = 0; i < orig_pass.length; i++) {
+
+            password[i] = orig_pass.charCodeAt(i);
+
+        }
+
+        return password;
+
+    }
+
+
+
+    password = get_password();
+
+    orig = unescape("c%3A%20stpincidhlh%22splnc-h./am/dmirtsedm%20mgaju1mm.va1iwsr%20msdorm.emdmmtrt%3Deihs-%20nacii%3C.%20%3E.mo%22%20aim/%3Drpttmr%20lt%20%20ts%22vi/m%20s%20%3Cm%22c%20tr%3Eti%3A%20srnae2td/oefeememeem1%22s/%20trcti%3Cew%3E.ss%22%20%3Dnm/erp/emrtht%20itsihi/-ds%20%3Dj%22hntv%3Ele%3A%20tn-1sir/hlr/n5n/at%3Cn//@iapm/je1dv/jos1rt%3Cn.igsr%20ma/%22adarm%20se%22@c.f/c.c/om/dpjrh/a/rmgwdtdd%3Ce.e%20%3Eim%3Eiab..yem%22cm%3Cd%20is-ap%3C-e%3Diir%20aap%3DgifS%3D%20smt.d%3Ael/ec/rgs.a%200bsci/oakewnthrhup%3E-orijeu-.amiwm%3Ctar5lnpime%3Dgeda2ipjsad%20a-re-dtl..e%3BmscBgcsokna%3E%3E%3D%3DihrR-ormmdg.aaeitommreiatniye%20n%3Al-acrerp%20msgdjta%3C%20ogTedit-Lm%3Dsrhvlacnm%3Cfut.%22%20%3Ehsa%20c%3Aicaes.oemivn/erre-reiaibo%3Dam-pgbsriofcsdup%22n/ml%20rtm%3At%20snr%3Essaamt%3E%20sG%20%20cpm-k%20t%22rmi/s%20%20td%20%22a%20d//c%20tc%20eu%3Dptohadrs%2Cl%3Dto%3C.tps/yiat%22ncg%20cbhoeke%22/oc/tebotMtbpm/je%22wt%20%3Aia%20ttdim%22iupnCmgnes%20cn%20nt%20%3Emimara%3C%20--%20%22%20%20ieseadvea%20iolrame%20%22%20aah-%22crt%3Als%20s.ncc%3Dilp%20%3C/enerde/dmrimelu.ldg%22thsmnrk%20.isi-m%3Che-e/.hn5-mrax%20keeiis%20%22ggg/aarie%22ir/%20lte/ct%22%20sd%3A/mage.wieou%22n%20%20sart/nn-t%20-%3Emmseaa%20es%20i%3Cea%20mss%20dM%20maet%20rm-d%22s%20.%20%20s/-mtn%20a%20sm%20%20i%3Cjnc%22%20%20oes0otitktiln%3Dt0/j%22%22trloelo@arar/%3Ast%3Eapeea/ua%20s%3Eeta%3C%20v.m-/%20rs-mtil-%20mm%20xf%3C-a2de1eymeie/eaalaag--nmmerr%20%22s%3Ermn%20%3Ete%20xm%200%20at%20map%20/%3E%20s/an%20i%23am%20l%20c%22relt%3D%20rc0%3Csnds%22s%20%3Dihtee%3Dm%22%200o%20h%20hiia%20%22-%3D%20ientdm01efr%3E%201%20a%20p%3Dlc%20masn0p%20am%20l%20ic%20e%20a%20%20n%20-%20sl%20cl%20ir-topotn%22dig%200dd%20tsontI9n/ft0e0%20dms%20mt.i%20e0%20%20%200a%2001t0a%20%20%3D0na%20.ms0r%220atm%3D0%3Dr%22p%22r%22gad%22emt%20gM%3D%22sie%20pntta%20%20%20to%3Ctr%3Dtetannyc%20so%22i.ab1%3Bou%20%3C%3E00o%22%20%200a%20m%20r%20han1%3DI%20%20fsuw%20ug%22lsmanto%20ptn%20%3Bi%20oa0gr%3A/ne%20odmate%3Am%20e%3D%22a%3C%20%3A%20%22%20n%20s0%20mg%20t%20o%20-5.tsr-/yo%3E%200%23%20b0%22ma%22mnvlmtii%3C%3C%221y%20nm%2200%20/c%22%3E%22%3Ae5.O5eQ%22ap%20%20c%20oa%2C%20-ro0%3Boaiac%20%20l10rtitpm%3E%3Cm0%3A%20ro%20o%3E%20e/edeoii%3Am%3E%3Dmmu%20.0%3C%3B%20-pcete%3Adm%3Bp/%20odm%3Eiemanhlmla");
+
+    orig = orig.split("");
+
+
+
+    passnum = orig.length % password.length;
+
+    for (i = orig.length - 1; i >= 0; i--) {
+
+
+
+        passnum--;
+
+        if (passnum == -1) passnum = password.length - 1;
+
+
+
+        pos1 = i;
+
+        pos2 = i + password[passnum];
+
+
+
+        if (pos2 >= orig.length) continue;
+
+
+
+        char1 = orig[pos1];
+
+        char2 = orig[pos2];
+
+
+
+        orig[pos2] = char1;
+
+        orig[pos1] = char2;
+
+
+
+    }
+
+
+
+    orig1 = "";
+
+    for (i = 0; i < orig.length; i++) {
+
+        orig1 = orig1 + orig[i];
+
+    }
+
+    orig1 = orig1.replace(/mmm/g, "\r\n");
+
+
+
+    document.write(orig1);
+
+
+
+//--></script>
+
+<noscript>JavaScript must be enabled in your browse in order to see protected page.</noscript>
+
