@@ -1,93 +1,22 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body>
+    <a-scene mindar-image="imageTargetSrc: https://raw.githubusercontent.com/pikaajl/webartest2/main/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-assets>
+            <img id="card" src="https://raw.githubusercontent.com/pikaajl/webartest2/main/targets.png" />
+            <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+        </a-assets>
 
-
-<script language="JavaScript1.2"><!--
-
-
-
-
-    function get_password() {
-
-        orig_pass = prompt("Please enter password", "");
-
-        if (orig_pass != null && orig_pass != "")
-
-            password = new Array(orig_pass.length);
-
-        for (i = 0; i < orig_pass.length; i++) {
-
-            password[i] = orig_pass.charCodeAt(i);
-
-        }
-
-        return password;
-
-    }
-
-
-
-    password = get_password();
-
-    orig = unescape("undefined%3Chtml%3Emmm%3Chead%3Emmm%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%20/%3Emmm%20%20%20%20%3Cscript%20src%3D%22https%3A//cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js%22%3E%3C/script%3Emmm%20%20%20%20%3Cscript%20src%3D%22https%3A//aframe.io/releases/1.2.0/aframe.min.js%22%3E%3C/script%3Emmm%20%20%20%20%3Cscript%20src%3D%22https%3A//cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js%22%3E%3C/script%3Emmm%3C/head%3Emmm%3Cbody%3Emmm%20%20%20%20%3Ca-scene%20mindar-image%3D%22imageTargetSrc%3A%20https%3A//raw.githubusercontent.com/pikaajl/webartest2/main/targets.mind%3B%22%20color-space%3D%22sRGB%22%20renderer%3D%22colorManagement%3A%20true%2C%20physicallyCorrectLights%22%20vr-mode-ui%3D%22enabled%3A%20false%22%20device-orientation-permission-ui%3D%22enabled%3A%20false%22%3Emmm%20%20%20%20%20%20%20%20%3Ca-assets%3Emmm%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22card%22%20src%3D%22https%3A//raw.githubusercontent.com/pikaajl/webartest2/main/targets.png%22%20/%3Emmm%20%20%20%20%20%20%20%20%20%20%20%20%3Ca-asset-item%20id%3D%22avatarModel%22%20src%3D%22https%3A//cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/softmind/scene.gltf%22%3E%3C/a-asset-item%3Emmm%20%20%20%20%20%20%20%20%3C/a-assets%3Emmmmmm%20%20%20%20%20%20%20%20%3Ca-camera%20position%3D%220%200%200%22%20look-controls%3D%22enabled%3A%20false%22%3E%3C/a-camera%3Emmm%20%20%20%20%20%20%20%20%3Ca-entity%20mindar-image-target%3D%22targetIndex%3A%200%22%3Emmm%20%20%20%20%20%20%20%20%20%20%20%20%3Ca-plane%20src%3D%22%23card%22%20position%3D%220%200%200%22%20height%3D%221%22%20width%3D%221%22%20rotation%3D%220%200%200%22%3E%3C/a-plane%3Emmm%20%20%20%20%20%20%20%20%20%20%20%20%3Ca-gltf-model%20rotation%3D%2290%200%200%20%22%20position%3D%220%200%200.1%22%20scale%3D%220.005%200.005%200.005%22%20src%3D%22%23avatarModel%22%20animation%3D%22property%3A%20position%3B%20to%3A%200%200.1%200.1%3B%20dur%3A%201000%3B%20easing%3A%20easeInOutQuad%3B%20loop%3A%20true%3B%20dir%3A%20alternate%22%3Emmm%20%20%20%20%20%20%20%20%3C/a-entity%3Emmm%20%20%20%20%3C/a-scene%3Emmm%3C/body%3Emmm%3C/html");
-
-    orig = orig.split("");
-
-
-
-    passnum = orig.length % password.length;
-
-    for (i = orig.length - 1; i >= 0; i--) {
-
-
-
-        passnum--;
-
-        if (passnum == -1) passnum = password.length - 1;
-
-
-
-        pos1 = i;
-
-        pos2 = i + password[passnum];
-
-
-
-        if (pos2 >= orig.length) continue;
-
-
-
-        char1 = orig[pos1];
-
-        char2 = orig[pos2];
-
-
-
-        orig[pos2] = char1;
-
-        orig[pos1] = char2;
-
-
-
-    }
-
-
-
-    orig1 = "";
-
-    for (i = 0; i < orig.length; i++) {
-
-        orig1 = orig1 + orig[i];
-
-    }
-
-    orig1 = orig1.replace(/mmm/g, "\r\n");
-
-
-
-    document.write(orig1);
-
-
-
-//--></script>
-
-<noscript>JavaScript must be enabled in your browse in order to see protected page.</noscript>
-
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+        <a-entity mindar-image-target="targetIndex: 0">
+            <a-plane src="#card" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
+            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        </a-entity>
+    </a-scene>
+</body>
+</html>
